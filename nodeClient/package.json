@@ -1,0 +1,12 @@
+{
+  "name": "nodeClient",
+  "version": "1.0.0",
+  "description": "Cliente do medidor de performance",
+  "main": "index.js",
+  "author": "Sidiney Silva",
+  "license": "MIT",
+  "dependencies": {
+    "farmhash": "^3.1.0",
+    "socket.io-client": "^2.3.1"
+  }
+}
