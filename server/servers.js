@@ -6,7 +6,7 @@ const express = require('express'),
     socketMain = require('./socketMain'),
     farmhash = require('farmhash');
 
-const port = 3000,
+const port = 8181,
     num_processes = require('os').cpus().length;
 
 if (cluster.isMaster) {
