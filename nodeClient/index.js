@@ -22,6 +22,10 @@ socket.on('connect', () => {
             socket.emit('perfData', allPerformanceData)
         })
     }, 1000); 
+
+    socket.on('disconnect', () => {
+        clearInterval(perfDataInterval)
+    })
 })
 function performanceData(){
     return new Promise(async (resolve, reject)=>{
