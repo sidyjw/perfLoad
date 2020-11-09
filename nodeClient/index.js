@@ -17,6 +17,11 @@ socket.on('connect', () => {
     //Client Auth
     socket.emit('clientAuth', 'dsxasn23p2kdmlsa')
 
+    performanceData().then((allPerformanceData)=>{
+        allPerformanceData.macA = macA
+        socket.emit('initPerfData', allPerformanceData)
+    })
+
     let perfDataInterval = setInterval(() => {
         performanceData().then((allPerformanceData)=>{
             socket.emit('perfData', allPerformanceData)
